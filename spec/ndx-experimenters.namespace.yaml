@@ -2,11 +2,10 @@ namespaces:
 - author: Ben Dichter
   contact: ben.dichter@gmail.com
   doc: An NWB:N extension
-  name: ndx-task
+  name: ndx-experimenters
   schema:
   - namespace: core
     neurodata_types:
-    - NWBDataInterface
-    - LabMetaData
-  - source: ndx-task.extensions.yaml
+    - NWBFile
+  - source: ndx-experimenters.extensions.yaml
   version: 0.1.0

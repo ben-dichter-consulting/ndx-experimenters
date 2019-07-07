@@ -1,0 +1,26 @@
+groups:
+- neurodata_type_def: NWBFile_experimenters
+  neurodata_type_inc: NWBFile
+  doc: Top level of NWB file.
+  groups:
+  - name: general
+    doc: "Experimental metadata, including protocol, notes and description of hardwaredevice(s).\
+      \  COMMENT: The metadata stored in this section should be used todescribe the\
+      \ experiment. Metadata necessary for interpreting the data is storedwith the\
+      \ data. MORE_INFO: General experimental metadata, including animalstrain, experimental\
+      \ protocols, experimenter, devices, etc, are stored under'general'. Core metadata\
+      \ (e.g., that required to interpret data fields) isstored with the data itself,\
+      \ and implicitly defined by the file specificationis to use free-form text fields,\
+      \ such as would appear in sentences or paragraphsfrom a Methods section. Metadata\
+      \ fields are text to enable them to be moregeneral, for example to represent\
+      \ ranges instead of numerical values. Machine-readablemetadata is stored as\
+      \ attributes to these free-form datasets. All entriesin the below table are\
+      \ to be included when data is present. Unused groups(e.g., intracellular_ephys\
+      \ in an optophysiology experiment) should not becreated unless there is data\
+      \ to store within them."
+    datasets:
+    - name: experimenters
+      dtype: text
+      shape:
+      - null
+      doc: holds multiple experimenters

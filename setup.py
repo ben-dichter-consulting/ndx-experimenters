@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 from shutil import copy2
 
 setup_args = {
-    'name': 'ndx-task',
+    'name': 'ndx-experimenters',
     'version': '0.1.0',
     'description': 'An NWB:N extension',
     'author': 'Ben Dichter',
@@ -18,9 +18,9 @@ setup_args = {
     ],
     'packages': find_packages('src/pynwb'),
     'package_dir': {'': 'src/pynwb'},
-    'package_data': {'ndx_task': [
-        'spec/ndx-task.namespace.yaml',
-        'spec/ndx-task.extensions.yaml',
+    'package_data': {'ndx_experimenters': [
+        'spec/ndx-experimenters.namespace.yaml',
+        'spec/ndx-experimenters.extensions.yaml',
     ]},
     'classifiers': [
         "Intended Audience :: Developers",
@@ -31,10 +31,10 @@ setup_args = {
 
 
 def _copy_spec_files(project_dir):
-    ns_path = os.path.join(project_dir, 'spec', 'ndx-task.namespace.yaml')
-    ext_path = os.path.join(project_dir, 'spec', 'ndx-task.extensions.yaml')
+    ns_path = os.path.join(project_dir, 'spec', 'ndx-experimenters.namespace.yaml')
+    ext_path = os.path.join(project_dir, 'spec', 'ndx-experimenters.extensions.yaml')
 
-    dst_dir = os.path.join(project_dir, 'src', 'pynwb', 'ndx_task', 'spec')
+    dst_dir = os.path.join(project_dir, 'src', 'pynwb', 'ndx_experimenters', 'spec')
     if not os.path.exists(dst_dir):
         os.mkdir(dst_dir)
 
